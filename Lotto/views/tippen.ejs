@@ -1,0 +1,47 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/stylesheets/form.css">
+
+
+
+<% if(!currentUser){ %>
+    <h1>Log dich ein, du Penner :(!</h1>
+<% } else{ %>
+    <h1>Hallo <%=currentUser.username%>! Du bist jetzt eingeloggt</h1
+    
+    
+    
+    <% if(foundTagestipp != null ) {%>
+        Deine heutigen Tipps: <br>
+        
+        <% for(var i = 0; i< foundTagestipp.tips.length; i++){ %>
+            
+            <div class=" tip"> 
+                Tipp <%= i+1 %>: <br>
+                <%=  foundTagestipp.tips[i] %> <br>
+            </div> <br>
+        <% } %>
+        
+        <form action="/tippen/deleteall"  method="POST">
+             <button class="btn btn-xs">Heutige Tipps löschen</button>
+       </form>
+       
+        
+    <% } %>
+    
+<% } %>
+<br>
+Tippen: 
+<form action="/tippen"  method="POST">
+    <p>Gib drei Zahlen zwischen 1 und 49 an!<p>
+    <input type= "text" name="zahl1" placeholder="0" required autofocus><br><br>
+    <input type= "text" name="zahl2" placeholder="0" required><br><br>
+    <input type= "text" name="zahl3" placeholder="0" required><br><br>
+    
+    <button class="btn btn-xs">Tipp abgeben</button>
+</form>
+<form action="/tippen/random"  method="POST">
+    <button class="btn btn-xs">Zufallstipp</button>
+</form>
+
+
+<% include partials/footer %>

@@ -1,0 +1,14 @@
+{
+  "name": "firstexpressapp",
+  "version": "1.0.0",
+  "description": "A Nice little THing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hallo"
+  ],
+  "author": "Paul Zimmermann",
+  "license": "ISC"
+}

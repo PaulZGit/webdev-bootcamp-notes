@@ -1,0 +1,21 @@
+<% include partials/header %>
+    <link rel="stylesheet" href="/stylesheets/form.css">
+
+
+    <div class="container">
+
+      <form class="form-signin" action="/register" method="POST">
+        <h2 class="form-signin-heading">Registrierung</h2>
+        
+        <input type ="text" name="username" placeholder="Benutzername" class="form-control" required autofocus>
+        <input type="email"  class="form-control" placeholder="E-Mail-Addresse" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Passwort" required>
+        
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> 
+
+
+<% include partials/footer %>
